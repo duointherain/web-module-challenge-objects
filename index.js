@@ -97,6 +97,15 @@ console.log(reviews[5].feedback);
 console.log("****task 4*****")
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
+function createNewReview(name, rating, feedback) {
+  this.name = name;
+  this.rating = rating;
+  this.feedback = feedback;
+ 
+  
+}
+
+console.log(createNewReview ("Harry", 4, "this place was wild"));
 
 
 
@@ -104,8 +113,23 @@ console.log("****task 4*****")
 
 
 
+console.log("****task 5*****")
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+console.log(reviews[5].feedback);
+
+
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+
+
+
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
+
+console.log(reviews[7].feedback)
+
+
+console.log("****task 6*****")
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -124,10 +148,20 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 
 function getReviewByIndex(reviews, index) {
     /* code here */
+    const nom = reviews[index].name;
+    const score = reviews[index].rating;
+    const words = reviews[index].feedback;
+    return(nom + " gave the restaurant a " + score + " and their feedback was: " + words);
   }
   
+console.log(getReviewByIndex(reviews, 0));
 
- 
+//console.log(reviews[7].feedback)
+
+
+
+
+  console.log("****task 7*****")
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -138,8 +172,11 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
+function getLastReview(arr) {
     /* code here */
+
+
+    
   } 
 
 
