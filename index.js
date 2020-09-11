@@ -172,13 +172,20 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
+
+
 function getLastReview(arr) {
     /* code here */
+  let index = arr.length -1;
+  const nom = reviews[index].name;
+  const score = reviews[index].rating;
+  const words = reviews[index].feedback;
+
+  return(nom + " gave the restaurant a " + score + " and their feedback was: " + words);
 
 
-    
   } 
-
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
